@@ -1,6 +1,6 @@
 function ListItem({ item }) {
   return (
-    <section classname="list-item">
+    <section className="list-item">
       <h3>{item}</h3>
       <button>X</button>
     </section>
