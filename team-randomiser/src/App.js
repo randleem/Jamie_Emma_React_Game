@@ -3,10 +3,22 @@ import "./App.css";
 
 import Input from "./components/Input";
 import List from "./components/List";
+import GroupSize from "./components/GroupSize";
 
 function App() {
   const [item, setItem] = useState("");
-  const [listArray, setListArray] = useState([]);
+  //const [listArray, setListArray] = useState([]);
+  const [listArray, setListArray] = useState([
+    "Emma",
+    "Lara",
+    "Tiff",
+    "Suzie",
+    "Imogen",
+    "Charlotte",
+    "Pascale",
+    "Sian",
+    "Cat",
+  ]);
   const [groupSize, setGroupSize] = useState(1);
   const [groupArray, setGroupArray] = useState([[]]);
   const [randomise, setRandomise] = useState(false);
@@ -31,32 +43,42 @@ function App() {
     //console.log(`this is groupArray1`, groupArray);
   }
 
+  function resetGroups() {
+    let emptyArray = [];
+    for (let i = 0; i < groupSize; i++) {
+      emptyArray.push([]);
+    }
+    console.log(`this is empty`, emptyArray);
+    setGroupArray(emptyArray);
+    console.log(`Should be emptyCells`, groupArray);
+  }
+
+  function handleRandomise() {
+    resetGroups();
+    setRandomise(true);
+  }
+
   useEffect(() => {
-    //console.log(groupArray);
+    console.log(groupArray);
   }, [groupArray]);
-  //[{group: 0, list: ["emma", "Cheryl", "Dave"]},
-  // {group: 1, list: ["jamie", "bernice", "Bob"]]
 
   function generateGroups() {
     let listArrayCopy = [...listArray];
     let groupIterations = Math.ceil(listArray.length / groupSize);
     for (let i = 0; i < groupIterations; i++) {
-      //console.log(`this is GS`, groupSize);
       for (let j = 0; j < groupSize; j++) {
         let randomNumber = Math.floor(Math.random() * listArrayCopy.length);
-        console.log(`RN`, randomNumber);
-        //console.log(groupArray);
-        console.log(`tt`, listArrayCopy[randomNumber]);
-        setGroupArray([...groupArray, [...groupArray[j]]]);
+        let newArray = [...groupArray];
+        newArray[j].push(listArrayCopy[randomNumber]);
+        setGroupArray(newArray);
         listArrayCopy.splice(randomNumber, 1);
-        //console.log(`thisis listarraycopy`, listArrayCopy);
       }
     }
   }
 
   useEffect(() => {
     if (randomise) {
-      // set up an arary of objects - no. Groups key, value = empty array
+      console.log(`this is emptygroups`, groupArray);
       generateGroups();
       setRandomise(false);
       console.log(groupArray);
@@ -67,12 +89,12 @@ function App() {
     <div>
       <Input onSubmit={handleSubmit} item={item} setItem={setItem} />
       <List listArray={listArray} />
-      <div>
-        <button onClick={handleGroupSubtraction}>-</button>
-        <h2>{groupSize}</h2>
-        <button onClick={handleGroupAddition}>+</button>
-      </div>
-      <button onClick={() => setRandomise(true)}>Randomise</button>
+      <GroupSize
+        subtraction={handleGroupSubtraction}
+        addition={handleGroupAddition}
+        groupSize={groupSize}
+      />
+      <button onClick={handleRandomise}>Randomise</button>
     </div>
   );
 }
