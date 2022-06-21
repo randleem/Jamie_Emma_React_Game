@@ -3,7 +3,7 @@ import ListItem from "./ListItem";
 
 function List({ listArray }) {
   return (
-    <div>
+    <div className="list-container">
       {listArray.map((item, index) => {
         return <ListItem item={item} key={index} />;
       })}

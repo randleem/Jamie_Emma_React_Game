@@ -1,8 +1,10 @@
+import "./ListItem.css";
+
 function ListItem({ item }) {
   return (
-    <section className="list-item">
-      <h3>{item}</h3>
-      <button>X</button>
+    <section className="list-item-container">
+      <p className="list-name">{item}</p>
+      <button className="btn delete-list-item">X</button>
     </section>
   );
 }

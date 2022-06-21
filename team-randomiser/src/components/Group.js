@@ -1,3 +1,5 @@
+import "./Group.css";
+
 function Group({ group }) {
   return (
     <section className="group-containers">
