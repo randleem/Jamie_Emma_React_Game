@@ -1,6 +1,6 @@
 // import "./Input.css";
 
-function Input({ item, onSubmit, setItem }) {
+function Input({ item, onSubmit, setItem, handleReset }) {
   function handleClick() {
     onSubmit();
   }
@@ -13,6 +13,7 @@ function Input({ item, onSubmit, setItem }) {
         onChange={(e) => setItem(e.target.value)}
       ></input>
       <button onClick={handleClick}>submit</button>
+      <button onClick={handleReset}>clear List</button>
     </div>
   );
 }

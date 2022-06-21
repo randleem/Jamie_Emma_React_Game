@@ -4,6 +4,7 @@ import "./App.css";
 import Input from "./components/Input";
 import List from "./components/List";
 import GroupSize from "./components/GroupSize";
+import DisplayGroups from "./components/DisplayGroups";
 
 function App() {
   const [item, setItem] = useState("");
@@ -17,7 +18,7 @@ function App() {
     "Charlotte",
     "Pascale",
     "Sian",
-    "Cat",
+    "Emma P",
   ]);
   const [groupSize, setGroupSize] = useState(1);
   const [groupArray, setGroupArray] = useState([[]]);
@@ -41,6 +42,10 @@ function App() {
     setGroupSize(groupSize - 1);
     setGroupArray([...groupArray.splice(0, groupArray.length - 1)]);
     //console.log(`this is groupArray1`, groupArray);
+  }
+
+  function resetList() {
+    setListArray([]);
   }
 
   function resetGroups() {
@@ -67,6 +72,9 @@ function App() {
     let groupIterations = Math.ceil(listArray.length / groupSize);
     for (let i = 0; i < groupIterations; i++) {
       for (let j = 0; j < groupSize; j++) {
+        if (listArrayCopy.length === 0) {
+          break;
+        }
         let randomNumber = Math.floor(Math.random() * listArrayCopy.length);
         let newArray = [...groupArray];
         newArray[j].push(listArrayCopy[randomNumber]);
@@ -87,7 +95,12 @@ function App() {
 
   return (
     <div>
-      <Input onSubmit={handleSubmit} item={item} setItem={setItem} />
+      <Input
+        onSubmit={handleSubmit}
+        item={item}
+        setItem={setItem}
+        handleReset={resetList}
+      />
       <List listArray={listArray} />
       <GroupSize
         subtraction={handleGroupSubtraction}
@@ -95,6 +108,7 @@ function App() {
         groupSize={groupSize}
       />
       <button onClick={handleRandomise}>Randomise</button>
+      {groupArray[0].length > 0 && <DisplayGroups groupArray={groupArray} />}
     </div>
   );
 }
