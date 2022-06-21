@@ -35,17 +35,14 @@ function App() {
 
   function handleGroupAddition() {
     setGroupSize(groupSize + 1);
-    setGroupArray([...groupArray, []]);
-    // console.log(`this is groupArray1`, groupArray);
   }
   function handleGroupSubtraction() {
     setGroupSize(groupSize - 1);
-    setGroupArray([...groupArray.splice(0, groupArray.length - 1)]);
-    //console.log(`this is groupArray1`, groupArray);
   }
 
   function resetList() {
     setListArray([]);
+    resetGroups();
   }
 
   function resetGroups() {
@@ -53,9 +50,7 @@ function App() {
     for (let i = 0; i < groupSize; i++) {
       emptyArray.push([]);
     }
-    console.log(`this is empty`, emptyArray);
     setGroupArray(emptyArray);
-    console.log(`Should be emptyCells`, groupArray);
   }
 
   function handleRandomise() {
@@ -86,7 +81,6 @@ function App() {
 
   useEffect(() => {
     if (randomise) {
-      console.log(`this is emptygroups`, groupArray);
       generateGroups();
       setRandomise(false);
       console.log(groupArray);
