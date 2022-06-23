@@ -1,38 +1,18 @@
-.App {
-  text-align: center;
+/* Desktop width 1200px */
+@media screen and (min-width: 1205px) {
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Laptop width 1024px */
+@media screen and (max-width: 1024px) {
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Ipad width 768px */
+@media screen and (max-width: 768px) {
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Moile Phone Screens Pixel 411px */
+@media screen and (max-width: 480px) {
+  .app-container {
+    padding: 20px;
   }
 }

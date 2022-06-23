@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-
 import Input from "./components/Input";
 import List from "./components/List";
 import GroupSize from "./components/GroupSize";
@@ -88,7 +87,7 @@ function App() {
   }, [randomise]);
 
   return (
-    <div>
+    <div className="app-container">
       <Input
         onSubmit={handleSubmit}
         item={item}

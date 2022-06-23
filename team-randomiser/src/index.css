@@ -19,8 +19,11 @@ code {
   padding: 5px;
   width: 40px;
   height: 40px;
-  border-radius: 5px;
+  border-radius: 2px;
   border: none;
+  background-color: #b85042;
+  font-size: 16px;
+  color: white;
 }
 
 /* Desktop width 1200px */
@@ -37,6 +40,9 @@ code {
 
 /* Moile Phone Screens Pixel 411px */
 @media screen and (max-width: 480px) {
+  .app-container {
+    padding: 20px;
+  }
   li {
     font-size: 20px;
   }
