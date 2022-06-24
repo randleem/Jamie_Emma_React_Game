@@ -12,3 +12,8 @@
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+.btn-container {
+  display: flex;
+  justify-content: space-evenly;
+}
