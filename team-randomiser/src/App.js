@@ -35,7 +35,13 @@ function App() {
     }
   }
 
-  function handleDeleteListItem(index) {}
+  function handleDeleteListItem(index) {
+    let newListArray = [...listArray];
+    console.log(newListArray, index);
+
+    newListArray.splice(index, 1);
+    setListArray(newListArray);
+  }
 
   function handleGroupAddition() {
     setGroupCount(groupCount + 1);
@@ -119,7 +125,7 @@ function App() {
         setItem={setItem}
         handleReset={resetList}
       />
-      <List listArray={listArray} />
+      <List listArray={listArray} handleDelete={handleDeleteListItem} />
       <GroupType
         isGroupCount={isGroupCount}
         setIsGroupCount={setIsGroupCount}
