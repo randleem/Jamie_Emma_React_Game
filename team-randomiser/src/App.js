@@ -37,8 +37,6 @@ function App() {
 
   function handleDeleteListItem(index) {
     let newListArray = [...listArray];
-    console.log(newListArray, index);
-
     newListArray.splice(index, 1);
     setListArray(newListArray);
   }
@@ -117,7 +115,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <h2>Team Randomiser</h2>
+      <h1 className="app-title">Team Randomiser</h1>
       <img className="app-logo" src={logo} alt="randomiser-logo" />
       <Input
         onSubmit={handleSubmit}
@@ -135,7 +133,11 @@ function App() {
         addition={handleGroupAddition}
         groupCount={groupCount}
       />
-      <button onClick={handleRandomise}>Randomise</button>
+      <div className="randomise-container">
+        <button className="randomise-button" onClick={handleRandomise}>
+          Randomise
+        </button>
+      </div>
       {groupArray[0].length > 0 && <DisplayGroups groupArray={groupArray} />}
     </div>
   );

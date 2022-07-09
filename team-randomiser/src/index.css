@@ -1,10 +1,8 @@
-/* Colour Codes Hex codes: Scarlet #B85042, Light Olive #E7E8D1, Light Teal #A7BEAE */
-
+/* Colour Codes Hex codes: Scarlet #B85042, Light Olive #E7E8D1, Light Teal #A7BEAE, Russian Violet #441151 */
+/* Space Cadet #222E50*/
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Albert Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #a7beae;

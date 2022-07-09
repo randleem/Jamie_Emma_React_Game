@@ -1,9 +1,14 @@
+import "./GroupCount.css";
 function GroupCount({ groupCount, addition, subtraction }) {
   return (
-    <div>
-      <button onClick={subtraction}>-</button>
+    <div className="group-container">
+      <button className="group-buttons btn" onClick={subtraction}>
+        -
+      </button>
       <h2>{groupCount}</h2>
-      <button onClick={addition}>+</button>
+      <button className="group-buttons btn" onClick={addition}>
+        +
+      </button>
     </div>
   );
 }

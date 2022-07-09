@@ -1,5 +1,28 @@
-.app-logo {
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.app-title {
+  font-family: "Albert Sans", sans-serif;
   text-align: center;
+}
+
+.randomise-container {
+  display: flex;
+  justify-content: center;
+}
+
+.randomise-button {
+  padding: 5px;
+  width: 140px;
+  height: 40px;
+  border-radius: 2px;
+  border: none;
+  background-color: #e7e8d1;
+  font-size: 20px;
+  /* color: white; */
 }
 
 /* Desktop width 1200px */

@@ -1,3 +1,15 @@
-.group-containers {
+.individual-group-containers {
   background-color: #b85042;
+  border-radius: 3px;
+  padding: 0% 10%;
+  margin: 10px;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  text-align: center;
+}
+
+.group-containers p {
+  margin: 5px;
 }
