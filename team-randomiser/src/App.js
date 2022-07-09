@@ -5,6 +5,7 @@ import List from "./components/List";
 import GroupCount from "./components/GroupCount";
 import DisplayGroups from "./components/DisplayGroups";
 import GroupType from "./components/GroupType";
+import logo from "./components/team-randomiser.png";
 
 function App() {
   const [item, setItem] = useState("");
@@ -33,6 +34,8 @@ function App() {
       return;
     }
   }
+
+  function handleDeleteListItem(index) {}
 
   function handleGroupAddition() {
     setGroupCount(groupCount + 1);
@@ -108,6 +111,8 @@ function App() {
 
   return (
     <div className="app-container">
+      <h2>Team Randomiser</h2>
+      <img className="app-logo" src={logo} alt="randomiser-logo" />
       <Input
         onSubmit={handleSubmit}
         item={item}

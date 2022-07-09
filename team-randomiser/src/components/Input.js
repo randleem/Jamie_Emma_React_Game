@@ -14,7 +14,7 @@ function Input({ item, onSubmit, setItem, handleReset }) {
     <div className="input-container">
       <input
         className="input-box"
-        placeholder="write name here"
+        placeholder="add name here"
         type="text"
         value={item}
         onChange={(e) => setItem(e.target.value)}
