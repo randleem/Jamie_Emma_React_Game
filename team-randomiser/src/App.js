@@ -11,15 +11,15 @@ function App() {
   const [item, setItem] = useState("");
   //const [listArray, setListArray] = useState([]);
   const [listArray, setListArray] = useState([
-    "Emma",
-    "Lara",
-    "Tiff",
-    "Suzie",
-    "Imogen",
-    "Charlotte",
-    "Pascale",
-    "Sian",
-    "Emma P",
+    // "Emma",
+    // "Lara",
+    // "Tiff",
+    // "Suzie",
+    // "Imogen",
+    // "Charlotte",
+    // "Pascale",
+    // "Sian",
+    // "Emma P",
   ]);
   const [groupCount, setGroupCount] = useState(1);
   const [groupArray, setGroupArray] = useState([[]]);
@@ -42,10 +42,20 @@ function App() {
   }
 
   function handleGroupAddition() {
-    setGroupCount(groupCount + 1);
+    if (listArray.length === 0) {
+      return;
+    } else if (listArray.length <= groupCount) {
+      return;
+    } else {
+      setGroupCount(groupCount + 1);
+    }
   }
   function handleGroupSubtraction() {
-    setGroupCount(groupCount - 1);
+    if (groupCount === 0) {
+      return;
+    } else {
+      setGroupCount(groupCount - 1);
+    }
   }
 
   function resetList() {
