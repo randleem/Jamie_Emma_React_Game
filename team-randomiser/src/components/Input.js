@@ -14,7 +14,7 @@ function Input({ item, onSubmit, setItem, handleReset }) {
     <div className="input-container">
       <input
         className="input-box"
-        placeholder="add name here"
+        placeholder="Add name here"
         type="text"
         value={item}
         onChange={(e) => setItem(e.target.value)}
@@ -24,10 +24,10 @@ function Input({ item, onSubmit, setItem, handleReset }) {
       ></input>
       <div className="btn-container">
         <button className="btn input input-submit" onClick={handleClick}>
-          submit
+          Submit
         </button>
         <button className="btn input input-clear" onClick={handleReset}>
-          clear List
+          Clear List
         </button>
       </div>
     </div>

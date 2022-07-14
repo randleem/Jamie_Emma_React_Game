@@ -1,7 +1,7 @@
 import "./GroupCount.css";
 function GroupCount({ groupCount, addition, subtraction }) {
   return (
-    <div className="group-container">
+    <div className="group-count-container">
       <button className="group-buttons btn" onClick={subtraction}>
         -
       </button>

@@ -1,8 +1,9 @@
 import Group from "./Group";
+import "./DisplayGroups.css";
 
 function DisplayGroups({ groupArray }) {
   return (
-    <div classname="group-container">
+    <div className="group-container">
       {groupArray.map((group, i) => {
         return <Group group={group} key={i} />;
       })}
