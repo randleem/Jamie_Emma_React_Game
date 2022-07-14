@@ -1,11 +1,13 @@
+import "./Group.css";
+
 function Group({ group }) {
   return (
-    <section className="group-containers">
-      <ul>
+    <section className="individual-group-containers">
+      <div>
         {group.map((name, i) => {
-          return <li key={i}>{name}</li>;
+          return <p key={i}>{name}</p>;
         })}
-      </ul>
+      </div>
     </section>
   );
 }

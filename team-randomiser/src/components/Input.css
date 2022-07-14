@@ -1,28 +1,25 @@
-.app-container {
+.btn.input {
+  width: 100px;
+  margin: 0px 10px;
+}
+.input-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
-.app-title {
-  font-family: "Albert Sans", sans-serif;
-  text-align: center;
+.input-box {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-.randomise-container {
+.btn-container {
   display: flex;
-  justify-content: center;
-}
-
-.randomise-button {
-  padding: 5px;
-  width: 140px;
-  height: 40px;
-  border-radius: 2px;
-  border: none;
-  background-color: #e7e8d1;
-  font-size: 20px;
-  /* color: white; */
+  justify-content: space-evenly;
 }
 
 /* Desktop width 1200px */
@@ -34,6 +31,11 @@
   .app-logo {
     width: 60%;
     height: auto;
+    align-self: center;
+  }
+
+  .input-box {
+    width: 60%;
     align-self: center;
   }
 }

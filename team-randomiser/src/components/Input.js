@@ -1,4 +1,4 @@
-// import "./Input.css";
+import "./Input.css";
 
 function Input({ item, onSubmit, setItem, handleReset }) {
   function handleClick() {
@@ -11,8 +11,10 @@ function Input({ item, onSubmit, setItem, handleReset }) {
   }
 
   return (
-    <div>
+    <div className="input-container">
       <input
+        className="input-box"
+        placeholder="Add name here"
         type="text"
         value={item}
         onChange={(e) => setItem(e.target.value)}
@@ -20,8 +22,14 @@ function Input({ item, onSubmit, setItem, handleReset }) {
           handleEnter(e);
         }}
       ></input>
-      <button onClick={handleClick}>submit</button>
-      <button onClick={handleReset}>clear List</button>
+      <div className="btn-container">
+        <button className="btn input input-submit" onClick={handleClick}>
+          Submit
+        </button>
+        <button className="btn input input-clear" onClick={handleReset}>
+          Clear List
+        </button>
+      </div>
     </div>
   );
 }

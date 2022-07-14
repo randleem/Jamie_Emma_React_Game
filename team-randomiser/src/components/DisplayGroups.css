@@ -1,6 +1,7 @@
-.list-container {
+.group-container {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 0% 10%;
+  align-content: center;
 }
