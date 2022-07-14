@@ -2,7 +2,11 @@
   width: 100px;
   margin: 0px 10px;
 }
-
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .input-box {
   width: 100%;
   padding: 12px 20px;
@@ -16,4 +20,38 @@
 .btn-container {
   display: flex;
   justify-content: space-evenly;
+}
+
+/* Desktop width 1200px */
+@media screen and (min-width: 1025px) {
+}
+
+/* Laptop width 1024px */
+@media screen and (max-width: 1024px) {
+  .app-logo {
+    width: 60%;
+    height: auto;
+    align-self: center;
+  }
+
+  .input-box {
+    width: 60%;
+    align-self: center;
+  }
+}
+
+/* Ipad width 768px */
+@media screen and (max-width: 768px) {
+}
+
+/* Moile Phone Screens Pixel 411px */
+@media screen and (max-width: 480px) {
+  /* .app-container {
+    padding: 20px;
+  } */
+
+  .app-logo {
+    width: 100%;
+    height: auto;
+  }
 }

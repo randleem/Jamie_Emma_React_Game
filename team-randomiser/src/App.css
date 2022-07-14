@@ -26,11 +26,16 @@
 }
 
 /* Desktop width 1200px */
-@media screen and (min-width: 1205px) {
+@media screen and (min-width: 1025px) {
 }
 
 /* Laptop width 1024px */
 @media screen and (max-width: 1024px) {
+  .app-logo {
+    width: 60%;
+    height: auto;
+    align-self: center;
+  }
 }
 
 /* Ipad width 768px */
@@ -39,9 +44,9 @@
 
 /* Moile Phone Screens Pixel 411px */
 @media screen and (max-width: 480px) {
-  .app-container {
+  /* .app-container {
     padding: 20px;
-  }
+  } */
 
   .app-logo {
     width: 100%;

@@ -16,3 +16,23 @@
 .delete-list-item {
   align-self: center;
 }
+
+/* Desktop width 1200px */
+@media screen and (min-width: 1025px) {
+}
+
+/* Laptop width 1024px */
+@media screen and (max-width: 1024px) {
+  .list-item-container {
+    width: 60%;
+    align-self: center;
+  }
+}
+
+/* Ipad width 768px */
+@media screen and (max-width: 768px) {
+}
+
+/* Moile Phone Screens Pixel 411px */
+@media screen and (max-width: 480px) {
+}

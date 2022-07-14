@@ -25,27 +25,30 @@ code {
 }
 
 /* Desktop width 1200px */
-@media screen and (min-width: 1205px) {
+@media screen and (min-width: 1025px) {
+  .app-container {
+    width: 800px;
+    margin: auto;
+  }
 }
 
 /* Laptop width 1024px */
 @media screen and (max-width: 1024px) {
+  .app-container {
+    padding: 30px 120px;
+  }
 }
 
 /* Ipad width 768px */
 @media screen and (max-width: 768px) {
+  .app-container {
+    padding: 30px 100px;
+  }
 }
 
 /* Moile Phone Screens Pixel 411px */
 @media screen and (max-width: 480px) {
   .app-container {
     padding: 20px;
-  }
-  li {
-    font-size: 20px;
-  }
-
-  p {
-    font-size: 16px;
   }
 }

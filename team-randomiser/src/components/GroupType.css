@@ -1,5 +1,6 @@
 .group-input-container {
   display: flex;
+  justify-content: center;
 }
 
 .group-input {
