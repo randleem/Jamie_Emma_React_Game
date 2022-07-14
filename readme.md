@@ -17,6 +17,7 @@ Clone down this repository. You will need node and npm installed globally on you
 
 ```
 git clone https://github.com/randleem/Team_Randomiser.git
+cd Team-randomiser
 ```
 
 2. Install any node modules (you will need node and npm installed globally on your machine):
