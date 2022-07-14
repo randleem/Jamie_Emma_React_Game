@@ -5,7 +5,7 @@
 
 ## Deployed App [here](https://reflectjournal.netlify.app/) - feel free to check it out 😀
 
-![reflect app screenshots](./team-randomiser.png)
+![reflect app screenshots](./randomiser.png)
 
 ---
 
