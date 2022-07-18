@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./App.css";
 import Input from "./components/Input";
 import List from "./components/List";
@@ -82,9 +82,9 @@ function App() {
     setRandomise(true);
   }
 
-  useEffect(() => {
-    console.log(groupArray);
-  }, [groupArray]);
+  // useEffect(() => {
+  //   console.log(groupArray);
+  // }, [groupArray]);
 
   function generateGroups() {
     let listArrayCopy = [...listArray];
@@ -115,13 +115,10 @@ function App() {
     }
   }
 
-  useEffect(() => {
-    if (randomise) {
-      generateGroups();
-      setRandomise(false);
-      console.log(groupArray);
-    }
-  }, [randomise]);
+  if (randomise) {
+    generateGroups();
+    setRandomise(false);
+  }
 
   return (
     <div className="app-container">
