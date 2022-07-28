@@ -9,18 +9,18 @@ import logo from "./components/team-randomiser.png";
 
 function App() {
   const [item, setItem] = useState("");
-  //const [listArray, setListArray] = useState([]);
-  const [listArray, setListArray] = useState([
-    // "Emma",
-    // "Lara",
-    // "Tiff",
-    // "Suzie",
-    // "Imogen",
-    // "Charlotte",
-    // "Pascale",
-    // "Sian",
-    // "Emma P",
-  ]);
+  const [listArray, setListArray] = useState([]);
+  //const [listArray, setListArray] = useState([
+  // "Emma",
+  // "Lara",
+  // "Tiff",
+  // "Suzie",
+  // "Imogen",
+  // "Charlotte",
+  // "Pascale",
+  // "Sian",
+  // "Emma P",
+  //]);
   const [groupCount, setGroupCount] = useState(1);
   const [groupArray, setGroupArray] = useState([[]]);
   const [randomise, setRandomise] = useState(false);
