@@ -1,77 +1,70 @@
-# Team Randomiser
+# Getting Started with Create React App
 
-- **About**: A simple team randomiser created in React.js. The app enables you to add members, select either the number of teams or team size and randomise people into groups. The app is fully responsive.
----
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Deployed App [here](https://reflectjournal.netlify.app/) - feel free to check it out 😀
+## Available Scripts
 
-![randomiser app screenshot](./team-randomiser/randomiser.png)
+In the project directory, you can run:
 
----
+### `npm start`
 
-## **Installation and Setup Instructions**
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Clone down this repository. You will need node and npm installed globally on your machine.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-1. Clone the repo from https://github.com/randleem/Team_Randomiser.git
+### `npm test`
 
-```
-git clone https://github.com/randleem/Team_Randomiser.git
-cd Team-randomiser
-```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-2. Install any node modules (you will need node and npm installed globally on your machine):
+### `npm run build`
 
-```
-npm install
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-3. Run the front-end server using:
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-```
-npm run start
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-4. Visit the App at:
+### `npm run eject`
 
-```
-localhost:3000
-```
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-5. To Run the Test Suite:
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-```
-npm run test
-```
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
----
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## How to use the app and the user's journey.
+## Learn More
 
-1. Add a name to the input box where is says "Add name here", hit the Sumbit button or press enter, the name will appear in the list below.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-2. Continue add more members.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-3. Once you have added everyone, move the group count up and down using the buttons until you have the number of groups or group size desired.
+### Code Splitting
 
-4. Select either group size or number of groups and hit randomise.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-5. You can delete people by hitting the X button next to a name.
+### Analyzing the Bundle Size
 
-6. To re-randomise simply hit the button again.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-7. Hit the clear list to clear all names from the list
+### Making a Progressive Web App
 
-8. Enjoy
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
----
+### Advanced Configuration
 
-## Tech used:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-- React.
-- CSS.
-- HTML.
+### Deployment
 
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-App Created by Emma Randle
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
