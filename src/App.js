@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Input from "./components/Input";
 import List from "./components/List";
@@ -9,18 +9,18 @@ import logo from "./components/team-randomiser.png";
 
 function App() {
   const [item, setItem] = useState("");
-  const [listArray, setListArray] = useState([]);
-  //const [listArray, setListArray] = useState([
-  // "Emma",
-  // "Lara",
-  // "Tiff",
-  // "Suzie",
-  // "Imogen",
-  // "Charlotte",
-  // "Pascale",
-  // "Sian",
-  // "Emma P",
-  //]);
+  //const [listArray, setListArray] = useState([]);
+  const [listArray, setListArray] = useState([
+    "Emma",
+    "Lara",
+    "Tiff",
+    "Suzie",
+    "Imogen",
+    "Charlotte",
+    "Pascale",
+    "Sian",
+    "Emma P",
+  ]);
   const [groupCount, setGroupCount] = useState(1);
   const [groupArray, setGroupArray] = useState([[]]);
   const [randomise, setRandomise] = useState(false);
@@ -42,13 +42,11 @@ function App() {
   }
 
   function handleGroupAddition() {
-    if (listArray.length === 0) {
-      return;
-    } else if (listArray.length <= groupCount) {
-      return;
-    } else {
-      setGroupCount(groupCount + 1);
-    }
+    // if (listArray.length === 0) {
+    //   return;
+    // } else {
+    setGroupCount(groupCount + 1);
+    // }
   }
   function handleGroupSubtraction() {
     if (groupCount === 0) {
@@ -86,39 +84,54 @@ function App() {
   //   console.log(groupArray);
   // }, [groupArray]);
 
-  function generateGroups() {
-    let listArrayCopy = [...listArray];
-    let groupIterations = 0;
-    let groupSize = 0;
-    if (isGroupCount) {
-      groupIterations = Math.ceil(listArray.length / groupCount);
-    } else {
-      groupIterations = groupCount;
-      console.log(groupIterations);
-    }
-    if (isGroupCount) {
-      groupSize = groupCount;
-    } else {
-      groupSize = Math.ceil(listArray.length / groupCount);
-    }
-    for (let i = 0; i < groupIterations; i++) {
-      for (let j = 0; j < groupSize; j++) {
-        if (listArrayCopy.length === 0) {
-          break;
+  useEffect(() => {
+    if (randomise === true) {
+      console.log("fred");
+      function generateGroups() {
+        let listArrayCopy = [...listArray];
+        let groupIterations = 0;
+        let groupSize = 0;
+        if (isGroupCount) {
+          groupIterations = Math.ceil(listArray.length / groupCount);
+        } else {
+          groupIterations = groupCount;
         }
-        let randomNumber = Math.floor(Math.random() * listArrayCopy.length);
-        let newArray = [...groupArray];
-        newArray[j].push(listArrayCopy[randomNumber]);
-        setGroupArray(newArray);
-        listArrayCopy.splice(randomNumber, 1);
+        if (isGroupCount) {
+          groupSize = groupCount;
+        } else {
+          groupSize = Math.ceil(listArray.length / groupCount);
+        }
+        for (let i = 0; i < groupIterations; i++) {
+          for (let j = 0; j < groupSize; j++) {
+            if (listArrayCopy.length === 0) {
+              break;
+            }
+            let randomNumber = Math.floor(Math.random() * listArrayCopy.length);
+            let newArray = [...groupArray];
+            newArray[j].push(listArrayCopy[randomNumber]);
+            setGroupArray(newArray);
+            listArrayCopy.splice(randomNumber, 1);
+            console.log(listArrayCopy);
+          }
+        }
       }
+      generateGroups();
+      setRandomise(false);
     }
-  }
+  }, [randomise]);
 
-  if (randomise) {
-    generateGroups();
-    setRandomise(false);
-  }
+  // useEffect(() => {
+  //   if (randomise) {
+  //     console.log("fred");
+  //     const timer = setTimeout(() => {
+  //       generateGroups();
+  //       console.log("This will run after 1 second!");
+  //     }, 10);
+
+  //     setRandomise(false);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [randomise]);
 
   return (
     <div className="app-container">

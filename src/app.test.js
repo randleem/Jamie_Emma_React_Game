@@ -61,6 +61,6 @@ test("renders 2 heading elements on page", async () => {
 
 test("renders randomise button on the page", () => {
   render(<App />);
-  const buttonElement = screen.getByText(/Click Randomise/i);
+  const buttonElement = screen.getByText(/Randomise/i);
   expect(buttonElement).toBeInTheDocument;
 });
