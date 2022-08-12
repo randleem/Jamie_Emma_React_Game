@@ -18,7 +18,7 @@ test("renders app title on the page2", () => {
   render(<App />);
   const headingElement = screen.getAllByRole("heading");
   expect(headingElement).toBeInTheDocument;
-  screen.getByTestId(/app-title/i);
+  // screen.getByTestId(/app-title/i);
 });
 
 test("renders app title on the page3", () => {
@@ -28,14 +28,14 @@ test("renders app title on the page3", () => {
   });
   expect(headingElement).toBeInTheDocument;
   //   expect(headingElement).toBe("Team Randomiser");
-  screen.getByTestId(/app-title/i);
+  //screen.getByTestId(/app-title/i);
 });
 
 test("renders app title on the page4", () => {
   render(<App />);
   const headingElement = screen.getByTestId("app-title-1");
   expect(headingElement).toBeInTheDocument;
-  screen.getByTestId(/app-title/i);
+  //screen.getByTestId(/app-title/i);
 });
 
 //Find By
@@ -61,6 +61,6 @@ test("renders 2 heading elements on page", async () => {
 
 test("renders randomise button on the page", () => {
   render(<App />);
-  const buttonElement = screen.getByText(/Randomise/i);
+  const buttonElement = screen.getByTestId("randomise-button");
   expect(buttonElement).toBeInTheDocument;
 });

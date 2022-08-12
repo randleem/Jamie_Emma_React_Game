@@ -135,7 +135,9 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1 className="app-title">Team Randomiser</h1>
+      <h1 className="app-title" data-testid="app-title-1">
+        Team Randomiser
+      </h1>
       <img className="app-logo" src={logo} alt="randomiser-logo" />
       <Input
         onSubmit={handleSubmit}
@@ -154,7 +156,11 @@ function App() {
         groupCount={groupCount}
       />
       <div className="randomise-container">
-        <button className="randomise-button" onClick={handleRandomise}>
+        <button
+          className="randomise-button"
+          data-testid="randomise-button"
+          onClick={handleRandomise}
+        >
           Randomise
         </button>
       </div>

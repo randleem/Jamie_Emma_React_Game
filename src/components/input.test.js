@@ -20,7 +20,7 @@ test("if there is a blank input box on page render", () => {
   );
   const nameInput = screen.getByPlaceholderText(/Add name here/i);
   expect(nameInput.value).toBe("");
-  screen.getByRole("textbox");
+  // screen.getByRole("textbox");
 });
 
 test("it should allow you to input a value", () => {
@@ -36,5 +36,5 @@ test("it should allow you to input a value", () => {
   expect(nameInput.value).toBe("");
   fireEvent.click(submitButton);
   expect(nameInput.value).toBe("");
-  screen.getByRole("textbox");
+  // screen.getByRole("textbox");
 });

@@ -44,7 +44,7 @@ test("should render 2 perople in group 2 when you have 5 people and 2 groups", (
       ]}
     />
   );
-  const sectionElements = screen.getByTestId("group-container-0");
-  expect(sectionElements).toContainHTML("p");
+  const sectionElement = screen.getByTestId("group-containers-1");
+  expect(sectionElement.children.length).toBe(2);
   //   screen.getByRole("textbox");
 });
